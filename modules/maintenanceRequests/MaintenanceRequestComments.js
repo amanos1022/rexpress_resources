@@ -1,4 +1,4 @@
-define(['../Utilities/AjaxForm','../RemoteTemplate/env', '../../vendor/lodash/lodash'], function(AjaxForm, env, _){
+define(['../Utilities/AjaxForm','../remoteTemplate/env', '../../vendor/lodash/lodash'], function(AjaxForm, env, _){
 	return function MaintenanceRequestComments(){
 		var authForm = $('form[MaintenanceSchedule]');
 
