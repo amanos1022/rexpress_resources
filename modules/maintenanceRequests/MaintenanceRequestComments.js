@@ -2,7 +2,7 @@ define(['../Utilities/AjaxForm','../remoteTemplate/env', '../../vendor/lodash/lo
 	return function MaintenanceRequestComments(){
 		var authForm = $('form[MaintenanceSchedule]');
 
-		AjaxForm({
+		var af = new AjaxForm({
 			formElem 	: authForm,
 			url 		: env.apiUrl + '/maintenance-request/comment/auth',
 			valid 		: function (response){

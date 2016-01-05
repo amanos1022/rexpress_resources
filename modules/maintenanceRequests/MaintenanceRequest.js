@@ -40,7 +40,7 @@ define(['../Utilities/AjaxForm', '../remoteTemplate/env'], function(AjaxForm, en
 		}
 		var displayErrors = function(response)
 		{
-			messages = response.messages;
+			var messages = response.messages;
 
 			alert('There were some issues with the form you submitted');
 			
@@ -58,7 +58,6 @@ define(['../Utilities/AjaxForm', '../remoteTemplate/env'], function(AjaxForm, en
 			valid 		: 	function(response){ uploadPhoto(response.maintenanceRequestId); },
 			invalid		: 	displayErrors,
 			prePost 	: 	function(){ formElem.find('input + .error, select + .error, textarea + .error').html(''); },
-			debug		: 	true
 		});
 
 		// Listen for postMessage from photo iframe
