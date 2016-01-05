@@ -1,0 +1,22 @@
+{
+  "name": "rexpress_resources",
+  "homepage": "https://github.com/amanos1022/rexpress_resources",
+  "authors": [
+    "amanos1022 <angelo@angelomanos.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "requirejs": "~2.1.22",
+    "lodash": "~3.10.1"
+  }
+}

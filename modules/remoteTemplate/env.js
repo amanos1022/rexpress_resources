@@ -1,2 +1,5 @@
-// var apiUrl = "http://rexpress-api/remote-template";
-var apiUrl = "http://rexpressapi.angelomanos.com/remote-template";
+define([], function(){
+	return {
+		apiUrl : 'http://rexpressapi.angelomanos.com/'
+	}
+});
