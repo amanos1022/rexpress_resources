@@ -3,7 +3,8 @@ define(['env', '../Utilities/AjaxForm', '../Utilities/OptionsParser'], function(
 		communityId : $('#remote-template-script').attr('community-id'),
 		requests 	: []
 	};
-	function init(){
+	var init = function(){
+		console.log(postData);
 		$.ajax({
 			url 	: 	env.apiUrl+'remote-template',
 			type 	: 	'post',
@@ -16,7 +17,7 @@ define(['env', '../Utilities/AjaxForm', '../Utilities/OptionsParser'], function(
 	var generateRequest = function(elem){
 		return {
 			name : elem.attr('remote-template'),
-			options : OptionsParser.parse(elem.attr('remote-template-options') || '')
+			options : OptionsParser(elem.attr('remote-template-options') || '')
 		}
 	}
 	var dispatchTemplates = function(templates){

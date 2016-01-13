@@ -11,7 +11,7 @@ define([], function(){
 		}
 
 		options.formElem.on('submit', function(e){
-			data = $(this).serialize();
+			data = options.formElem.serialize();
 
 			e.preventDefault();
 			options.prePost();

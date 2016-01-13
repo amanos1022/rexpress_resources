@@ -1,7 +1,7 @@
 define([], function(){
 	// format = key:value|key:value|
-	var options = {};
-	this.parse = function(raw){
+	return function OptionsParser(raw){
+		var options = {};
 		if(raw != ''){
 			var optionsRaw = raw.split('|');
 			for(var i = 0 ; i < optionsRaw.length ; i++ ){
@@ -10,8 +10,5 @@ define([], function(){
 			}
 		}
 		return options;
-	}
-	return {
-		parse : parse
 	}
 });
