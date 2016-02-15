@@ -4,7 +4,6 @@ define(['env', '../Utilities/AjaxForm', '../Utilities/OptionsParser'], function(
 		requests 	: []
 	};
 	var init = function(){
-		console.log(postData);
 		$.ajax({
 			url 	: 	env.apiUrl+'remote-template',
 			type 	: 	'post',
