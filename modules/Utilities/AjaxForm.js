@@ -27,7 +27,6 @@ define([], function(){
 			});
 		}
 		var success = function(response){
-			var response = JSON.parse(response);
 			if(response.fails){
 				options.invalid(response);
 			}else{

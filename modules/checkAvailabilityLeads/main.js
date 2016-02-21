@@ -2,7 +2,7 @@ require(['../Utilities/AjaxForm', 'env', '../../vendor/lodash/lodash'], function
 	var form = $('#check-availability-lead');
 	var af = new AjaxForm({
 		formElem 	: form,
-		url 		: env.apiUrl+'check-availability-leads',
+		url 		: env.apiUrl+'check-availability-lead',
 		invalid		: function(r){
 			_.forEach(r.messages, function(value, key){
 				form.find('input[name="'+key+'"] + .error').html(value);
