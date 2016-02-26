@@ -6,6 +6,7 @@ define(['../Utilities/AjaxForm','../remoteTemplate/env', '../../vendor/lodash/lo
 			formElem 	: authForm,
 			url 		: env.apiUrl + '/maintenance-request/comment/auth',
 			valid 		: function (response){
+				response = JSON.parse(response); 
 				authForm.parent().append(ui.getMainteneanceRequestsList(response.maintenanceRequests))
 				authForm.remove();
 			}
@@ -23,6 +24,7 @@ define(['../Utilities/AjaxForm','../remoteTemplate/env', '../../vendor/lodash/lo
 				return commentsElem;
 			},
 			addComment 	: function(comment, elem){
+				console.log(comment);
 				var commentElem = $('<div class="created_by_'+comment.created_by+'"></div>')
 									.appendTo(elem);
 				commentElem.html(comment.comment);
@@ -57,7 +59,6 @@ define(['../Utilities/AjaxForm','../remoteTemplate/env', '../../vendor/lodash/lo
 					});
 				}
 				_.forEach(maintenanceRequests, appendItem);
-
 				return container;
 			}
 		};
@@ -69,6 +70,7 @@ define(['../Utilities/AjaxForm','../remoteTemplate/env', '../../vendor/lodash/lo
 				formElem 	: 	addForm,
 				url			: 	env.apiUrl+'maintenance-request/comment',
 				valid 		: 	function(response){ 
+					response = JSON.parse(response);
 					var comment = response.comment;
 
 					ui.addComment(comment, comments);

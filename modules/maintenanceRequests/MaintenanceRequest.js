@@ -51,11 +51,11 @@ define(['../Utilities/AjaxForm', '../remoteTemplate/env'], function(AjaxForm, en
 				}
 			}
 		}
-
+		var communityId = formElem.find('input[name="community_id"]').val();
 		var af = new AjaxForm({
 			formElem	: 	formElem,
-			url 		: 	env.apiUrl+'maintenance-request',
-			valid 		: 	function(response){ uploadPhoto(response.maintenanceRequestId); },
+			url 		: 	env.apiUrl+'community/'+communityId+'/maintenance-request',
+			valid 		: 	function(response){ uploadPhoto(response.payload.id); },
 			invalid		: 	displayErrors,
 			prePost 	: 	function(){ formElem.find('input + .error, select + .error, textarea + .error').html(''); },
 		});
