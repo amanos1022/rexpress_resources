@@ -5,7 +5,7 @@
 			- in this case we're using iframe[x].contentWindow.postMessage to trigger the form to submit
 */
 
-define(['../Utilities/AjaxForm', '../remoteTemplate/env'], function(AjaxForm, env){
+define(['AjaxForm', 'env', 'jquery', 'fancybox'], function(AjaxForm, env, $, fancybox){
 	return function MaintenanceRequest(formElem){
 		var data;
 
@@ -41,9 +41,20 @@ define(['../Utilities/AjaxForm', '../remoteTemplate/env'], function(AjaxForm, en
 		var displayErrors = function(response)
 		{
 			var messages = response.messages;
+			var messageAnchor = $('<h3>There were some errors with the data you submitted.</h3>');
 
-			alert('There were some issues with the form you submitted');
-			
+			$.fancybox({
+				content : messageAnchor,
+				helpers : {
+					overlay : {
+						locked : false
+					}
+				}
+			});
+			setTimeout(function(){
+				$.fancybox.close();
+			}, 2000);
+
 			for(var input in messages){
 				if(messages.hasOwnProperty(input)){
 					var message = messages[input];
@@ -51,6 +62,7 @@ define(['../Utilities/AjaxForm', '../remoteTemplate/env'], function(AjaxForm, en
 				}
 			}
 		}
+		
 		var communityId = formElem.find('input[name="community_id"]').val();
 		var af = new AjaxForm({
 			formElem	: 	formElem,

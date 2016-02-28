@@ -1,4 +1,6 @@
-require(['../maintenanceRequests/MaintenanceRequest', '../maintenanceRequests/MaintenanceRequestComments'], function(MaintenanceRequest, MaintenanceRequestComments){
-	MaintenanceRequest($('form[MaintenanceRequest]'));
-	MaintenanceRequestComments();
+define(['../maintenanceRequests/MaintenanceRequest', '../maintenanceRequests/MaintenanceRequestComments'], function(MaintenanceRequest, MaintenanceRequestComments){
+	return function(formSelector){
+		MaintenanceRequest($(formSelector));
+		MaintenanceRequestComments();
+	}
 });

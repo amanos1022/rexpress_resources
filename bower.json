@@ -23,6 +23,8 @@
   "devDependencies": {
     "underscore": "~1.8.3",
     "fancyBox": "fancybox#~2.1.5",
-    "velocity": "~1.2.3"
+    "velocity": "~1.2.3",
+    "text": "requirejs/text#~2.0.14",
+    "moment": "~2.11.2"
   }
 }
