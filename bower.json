@@ -19,5 +19,8 @@
     "requirejs": "~2.1.22",
     "lodash": "~3.10.1",
     "slick-carousel": "~1.5.9"
+  },
+  "devDependencies": {
+    "underscore": "~1.8.3"
   }
 }

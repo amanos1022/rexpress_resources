@@ -1,4 +1,4 @@
-define([], function(){
+define(function(require){
 	var AjaxForm = function(options){
 		var data;
 		var options = {
