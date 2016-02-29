@@ -4,7 +4,7 @@ requirejs.config({
 		'underscore' 	: 	'../../vendor/underscore/underscore-min',
 		'AjaxForm' 		: 	'../Utilities/AjaxForm',
 		'fancybox' 		: 	'../../vendor/fancyBox/source/jquery.fancybox',
-		'fancyboxCSS' 	: 	'../venderHelpers/fancyboxCSS',
+		'fancyboxCSS' 	: 	'../vendorHelpers/fancyboxCSS',
 		'LoadCSS' 		: 	'../Utilities/LoadCSS',
 		'velocity' 		: 	'../../vendor/velocity/velocity',
 		'text'			: 	'../../vendor/text/text',
