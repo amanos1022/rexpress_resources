@@ -7,6 +7,7 @@ define(['AjaxForm', 'env', 'underscore'], function(AjaxForm, env, _){
 			alert('Thank You! Someone will be contacting you shortly.');
 			formElem.find('input[type="text"]').val('');
 			formElem.find('select').val('');
+			formElem.find('textarea').val('');
 		}
 		var invalid = function(r){
 			_.each(r.messages, function(message, key){
