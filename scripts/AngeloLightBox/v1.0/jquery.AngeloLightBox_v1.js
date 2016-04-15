@@ -1,9 +1,20 @@
 $.fn.extend({
     AngeloLightBox : function(options){
+        var options =  options || {};
         var imgContainerWidth = options.imgContainerWidth || 70;
         var imgContainerLeft = (100 - imgContainerWidth) / 2;
+        var imgContainerTop  = options.imgContainerTop || '100px';
 
+       
         $(this).click(function(){
+            // check if element is div or img
+            if($(this).tagName == 'img'){
+                var imgSrc = $(this).attr('src');
+            }else{
+                var imgSrc = $(this).css('background-image')
+                                    .replace('url("', '')
+                                    .replace('")', '');
+            }
             var close = function(){
                 haze.remove();
                 imgContainer.remove();
@@ -26,14 +37,14 @@ $.fn.extend({
                                 width       :   imgContainerWidth+'%',
                                 left        :   imgContainerLeft+'%',
                                 position    :   'fixed',
-                                top         :   '100px',
+                                top         :   options.imgContainerTop,
                                 background  :   '#fff',
                                 zIndex      :   '1000002',
                                 padding     :   '10px',
                                 boxShadow   :   '0 0 20px rgba(0,0,0,0.2)'
                             })
                             .appendTo('body')
-                            .append('<img src="'+$(this).attr('src')+'" width="100%">');
+                            .append('<img src="'+imgSrc+'" width="100%">');
 
             var closeBtn = $('<div><img src="http://resources.residentexpress.com/scripts/AngeloLightBox/v1.0/images/btn-close.png" width="100%"></div>')
                                 .css({
