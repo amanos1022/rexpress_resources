@@ -35,7 +35,7 @@ $.fn.extend({
                             .appendTo('body')
                             .append('<img src="'+$(this).attr('src')+'" width="100%">');
 
-            var closeBtn = $('<div><img src="'+options.closeBtnSrc+'" width="100%"></div>')
+            var closeBtn = $('<div><img src="http://resources.residentexpress.com/scripts/AngeloLightBox/v1.0/images/btn-close.png" width="100%"></div>')
                                 .css({
                                     position:'absolute',
                                     top:'-15px',
