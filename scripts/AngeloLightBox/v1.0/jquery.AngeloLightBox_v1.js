@@ -8,7 +8,7 @@ $.fn.extend({
        
         $(this).click(function(){
             // check if element is div or img
-            if($(this).tagName == 'img'){
+            if($(this).prop('tagName') == 'IMG' || $(this).prop('tagName') == 'img'){
                 var imgSrc = $(this).attr('src');
             }else{
                 var imgSrc = $(this).css('background-image')
