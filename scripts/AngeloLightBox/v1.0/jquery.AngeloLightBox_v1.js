@@ -32,7 +32,7 @@ $.fn.extend({
                             .appendTo('body')
                             .click(close);
 
-            var imgContainer = $('<div></div>')
+            var imgContainer = $('<div class="angelo-light-box-img"></div>')
                             .css({
                                 width       :   imgContainerWidth+'%',
                                 left        :   imgContainerLeft+'%',
