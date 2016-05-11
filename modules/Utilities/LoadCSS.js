@@ -1,4 +1,4 @@
-define(function loadCss(require) {
+define('LoadCSS', function loadCss(require) {
 	return function(url){
 		var link = document.createElement("link");
 		link.type = "text/css";

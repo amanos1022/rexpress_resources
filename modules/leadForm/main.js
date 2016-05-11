@@ -1,4 +1,4 @@
-require(['../Utilities/AjaxForm', 'env', '../../vendor/lodash/lodash'], function(AjaxForm, env, _){
+require(['AjaxForm', 'env', '../../vendor/lodash/lodash'], function(AjaxForm, env, _){
 	var form = $('#lead-form');
 	var af = new AjaxForm({
 		formElem 	: 	form,

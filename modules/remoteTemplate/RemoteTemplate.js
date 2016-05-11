@@ -1,4 +1,4 @@
-define(['env', 'AjaxForm', '../Utilities/OptionsParser', 'jquery', 'underscore'], function(env, AjaxForm, OptionsParser, $, _){
+define('RemoteTemplate', ['env', 'AjaxForm', '../Utilities/OptionsParser', 'jquery', 'underscore'], function(env, AjaxForm, OptionsParser, $, _){
 	var postData = {
 		communityId : $('#remote-template-script').attr('community-id'),
 		requests 	: []

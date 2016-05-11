@@ -1,6 +1,6 @@
-define([], function(){
+define('env', [], function(){
 	return {
-		apiUrl : 'http://rexpressapi.angelomanos.com/',
-		resourcesUrl : 'http://rexpressres.angelomanos.com/',
+		apiUrl : 'http://api.residentexpress.com/',
+		resourcesUrl : 'http://resources.residentexpress.com/',
 	}
 });

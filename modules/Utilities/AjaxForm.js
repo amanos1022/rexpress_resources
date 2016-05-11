@@ -1,4 +1,4 @@
-define(function(require){
+define('AjaxForm', function(require){
 	var AjaxForm = function(options){
 		var data;
 		var options = {
