@@ -62,7 +62,6 @@ define(['AjaxForm', 'env', 'jquery', 'fancybox'], function(AjaxForm, env, $, fan
 				}
 			}
 		}
-		
 		var communityId = formElem.find('input[name="community_id"]').val();
 		var af = new AjaxForm({
 			formElem	: 	formElem,
